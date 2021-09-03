@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Document</title>
+
+</head>
+<!--
+    GET:данные отправляются в открытом виде в строке запрос(URL)
+    <сайт>?name=vasya&age=12&height=170 
+    после знака вопрос идут дополнительные параметры
+
+    POST данные передаются в закрытом виде в теле запроса
+-->
+<body>
+    <form action="https://www.google.com" method="POST">
+        <input name="name"  required value="HTML" /><!--по умолчанию value пустой, если прописать будет в поле по умолчанию, required  делает это окно обязательным-->
+        <br />
+        <input type="date" />
+        <br />
+        <input name="age" type="number" step="0.2" max="15" min="2"/> <!--для инпут тип number числа-->
+        <br />
+        <input placeholder="Enter password" type="password"/> <!--поле для ввода пароля--> <!--для фона placeholder-->
+        <br />
+
+        <input type="checkbox"/> <!--выбирать несколько вариантов-->
+        <br />
+        <input checked type="checkbox"/> <!--выбирать несколько вариантов + cheked флажок ставится по умолчанию-->
+        <br />
+        <input name="test" type="radio"/> <!--выбрать один вариант один из добавляем в оба radio одинаковый name--> 
+        <span>Java</span>
+        <br />
+        <input name="test" type="radio"/>
+        <span>JS</span>
+        <br />
+        
+
+        <!--выадающий список-->
+        <select name="fruit">
+            <option value="1">Orange</option>
+            <option value="2" selected>Lemon</option> <!--selected этот элемент будет по умолчанию в строке вместо первого-->
+            <option value="3">Apple</option>
+        </select>
+        <br />
+
+        <!-- текст больше одной строки-->
+        <!--размер окна для текстэреа по умолчанию -->
+        <textarea rows="5" cols="10"> 
+        </textarea>
+        <br />
+
+        <input type="button" value="Click me" />
+        <br />
+        <button>Send</button><!--данные формы отправляются на сервер-->
+        <input type="submit" value="OK" /> <!--данные формы отправляются на сервер-->
+    
+
+    </form>
+
+    <!--type = disk, circle, square-->
+    <ul type="square"> 
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ul> <!--ul не нумирванный список -->
+
+    <ol type="A">
+        <li>Vasya</li>
+        <li>Petya</li>
+        <li>Kolya</li>
+    </ol>
+
+    <table border="5">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>age</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Vasya</th>
+                <th>15</th>
+                <th rowspan="2">maler</th><!--обединенеи строк rowspan-->
+
+            </tr>
+            <tr>
+                <th>Maria</th>
+                <th>20</th>
+                <th>female</th>
+
+            </tr><tr>
+                <th>Kostya</th>
+                <th>18</th>
+                <th>maler</th>
+
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <th colspan="2">3</th> <!--colspan количество столбцов для объединения-->
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

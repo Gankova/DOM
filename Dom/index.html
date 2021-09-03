@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head >
+    
+    <title>Document</title>
+</head>
+<body>
+    <div id="test">
+        <p>Hello</p>
+        <p>world</p>
+        <span class="cl2">Javascript</span>
+    </div>    
+    <button onclick="alert('hello')">Click me!</button>
+    
+    <input oninput="inputText(this.value)" /><!--this  -указатель на обект input -->
+
+    <div onclick="console.log('hello')">
+        <div onclick="event.stopPropagation();console.log('world')"> <!--stopPropagation выведет только word останавливает console.log('hello') -->
+            I love JS
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
